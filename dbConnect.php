@@ -12,6 +12,6 @@ $conn = mysqli_connect(DB_HOST, DB_USER, DB_PSWD, DB_NAME);
 if(!$conn){
      die('Error connecting to database');
 }
-echo "You have connected to database";
+echo "Welcome!";
 
 ?>
