@@ -2,8 +2,7 @@
     session_start();
     session_unset();
     session_destroy();
-    
-    
-    header("Location: /inventory");
-?>
 
+
+    header("Location: index.php");
+?>
