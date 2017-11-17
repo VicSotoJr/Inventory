@@ -4,13 +4,13 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
     }
-    require 'dbconnect.php';
-    
+    require 'dbConnect.php';
+
 ?>
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        
+
         <title>Inventory List</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,24 +19,24 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
-     
-     
-    
+
+
+
     <body>
-            
+
          <h1>
             <div class="header">
             </div>
          </h1>
-        
+
             <div class="tableName">
                 20 Oz.
             </div>
-        
-            <div class="topcorner"><a href="logout.php">Logout</a></div>            
-            
+
+            <div class="topcorner"><a href="logout.php">Logout</a></div>
+
             <ul>
                 <li class="nav-item">
                     <a href="/inventory">
@@ -54,13 +54,13 @@
                 </li>
             </ul>
          <?php
-           
-                $query = "SELECT sodaID,sodaName,size,price,quantity FROM soda WHERE size='20 oz'"; 
+
+                $query = "SELECT sodaID,sodaName,size,price,quantity FROM soda WHERE size='20 oz'";
                 $result = mysqli_query($conn,$query);
 
-                
+
                 echo "<table class='table table-hover table-striped table-responsive'>";
-               
+
                 echo "<tr>
                       <th>SodaID</th>
                       <th>SodaName</th>
@@ -68,17 +68,17 @@
                       <th>Quantity</th>
                       <th>Update Quantity</th>
                       </tr>";
-                
-                while($row = mysqli_fetch_array($result)){   
+
+                while($row = mysqli_fetch_array($result)){
                     $sodaId = $row['sodaID'];
                     echo "<tr><td>" . $row['sodaID'] . "</td><td>" . $row['sodaName'] . "</td><td>" . $row['price'] . "<td>" . $row['quantity'] . "</td>"."<td>"
                             ."<form action='pepsi_OZ.php' method='post' onsubmit='parent.window.location.reload(false)'>"."<input type='text' name='quantity' value='$quantity'>"
                             ."<input type='hidden' name='sodaId' value='$sodaId'>"
-                            ."<td><input type='submit' name ='qSubmit' value = 'Submit'></td>"."</form>"."</td>"."</tr>";  
+                            ."<td><input type='submit' name ='qSubmit' value = 'Submit'></td>"."</form>"."</td>"."</tr>";
                 }
 
                 echo "</table>";
-                
+
                 if(!empty($_POST['quantity']))
                 {
                     $quantity = $_POST['quantity'];
@@ -89,19 +89,19 @@
                     if (mysqli_query($conn, $sql)) {
                          echo "Updated!";
                          echo $sodaId, $quantity;
-    
+
                     } else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    } 
-                    
+                    }
+
                         header("Location:pepsi_OZ.php");
-                       
+
                 }
-               
-    
+
+
          ?>
-        
+
     </body>
-    
-    
+
+
 </html>

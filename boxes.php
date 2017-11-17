@@ -4,12 +4,12 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
     }
-    require 'dbconnect.php';
+    require 'dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        
+
         <title>Inventory List</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,21 +18,21 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
-    
+
     <body>
-            
+
          <h1>
              <div class="header">
             </div>
          </h1>
-        
+
             <div class="tableName">
                 Boxes
             </div>
-            <div class="topcorner"><a href="logout.php">Logout</a></div>          
-           
+            <div class="topcorner"><a href="logout.php">Logout</a></div>
+
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -44,7 +44,7 @@
                     <a class="nav-link" href="freezer.php">Freezer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="back.php">Back</a>   
+                    <a class="nav-link" href="back.php">Back</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="dough.php">Dough</a>
@@ -67,15 +67,15 @@
             </ul>
        </nav>
          <?php
-        
-                $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where areaID = 'BX'"; 
+
+                $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where areaID = 'BX'";
                 $result = mysqli_query($conn,$query);
 
-                echo "<table class='table table-hover table-striped table-responsive'>"; 
+                echo "<table class='table table-hover table-striped table-responsive'>";
 
                 echo "<tr>
                       <th>ItemID</th>
-                      <th>ItemName</th> 
+                      <th>ItemName</th>
                       <th>Pack</th>
                       <th>Size</th>
                       <th>Price</th>
@@ -84,8 +84,8 @@
                       <th></th>
                       <th>Barcodes</th>
                       </tr>";
-                
-             while($row = mysqli_fetch_array($result)){ 
+
+             while($row = mysqli_fetch_array($result)){
                     $ID = $row['ID'];
                     $item = $row['itemID'];
                     echo "<tr><td>" . $row['itemID'] . "</td><td>" . $row['itemName'] . "</td><td>" . $row['pack'] . "</td>"
@@ -98,10 +98,10 @@
                             ."<form method='post' action='barcode.php'>"
                             ."<td><input type='submit' name ='generate' value ='$item'></td>"
                             ."</form>"."</td>"
-                            ."</tr>";  
+                            ."</tr>";
                 }
                 echo "</table>";
-                
+
                 if(!empty($_POST['quantity']))
                 {
                     $quantity = $_POST['quantity'];
@@ -112,19 +112,19 @@
                     if (mysqli_query($conn, $sql)) {
                          echo "Updated!";
                          echo $ID, $quantity;
-    
+
                     } else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    } 
-                    
+                    }
+
                         header("Location:boxes.php");
-                       
+
                 }
 
-    
+
          ?>
-        
+
     </body>
-    
-    
+
+
 </html>

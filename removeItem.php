@@ -4,13 +4,13 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
     }
-    require 'dbconnect.php';
+    require 'dbConnect.php';
 ?>
 
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        
+
         <title>Remove Items</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +19,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
 <body>
-    
-          
+
+
             <div class="header">
                 <br>
             <form action="removeItem.php" method="POST">
@@ -31,7 +31,7 @@
                     <input type ="submit" value="Enter">
             </form>
             </div>
-    
+
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -69,23 +69,23 @@ $q = $_POST["ItemID"];
 
  $sql = "update items set quantity= quantity-1 where itemID= '$q'";
                 $result = mysqli_query($conn,$sql);
- $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where itemID = '$q'"; 
+ $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where itemID = '$q'";
                 $result = mysqli_query($conn,$query);
-               
 
-                echo "<table class='table table-hover table-striped table-responsive'>"; 
+
+                echo "<table class='table table-hover table-striped table-responsive'>";
 
                 echo "<tr>
                       <th>ItemID</th>
-                      <th>ItemName</th> 
+                      <th>ItemName</th>
                       <th>Pack</th>
                       <th>Size</th>
                       <th>Price</th>
                       <th>Quantity</th>
                       <th>Barcodes</th>
                       </tr>";
-                
-                while($row = mysqli_fetch_array($result)){ 
+
+                while($row = mysqli_fetch_array($result)){
                     $ID = $row['ID'];
                     $item = $row['itemID'];
                     echo "<tr><td>" . $row['itemID'] . "</td><td>" . $row['itemName'] . "</td><td>" . $row['pack'] . "</td>"
@@ -93,11 +93,11 @@ $q = $_POST["ItemID"];
                             ."<form method='post' action='barcode.php'>"
                             ."<td><input type='submit' name ='generate' value ='$item'></td>"
                             ."</form>"."</td>"
-                            ."</tr>";  
+                            ."</tr>";
                 }
 
                 echo "</table>";
-                
+
                 $sql = "update items set quantity= quantity-1 where ID= '$ID'";
                 if(!empty($_POST['itemID']))
                 {
@@ -109,20 +109,19 @@ $q = $_POST["ItemID"];
                     if (mysqli_query($conn, $sql)) {
                          echo "Updated!";
                          echo $ID," ", $quantity;
-    
+
                     } else {
                          console.log( mysqli_error($conn));
-                    } 
+                    }
                          header("Location:removeItem.php");
-                        
-          
-                       
+
+
+
                 }
 
-    
+
 ?>
 
 
 </body>
 </html>
-

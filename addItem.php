@@ -4,13 +4,13 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
     }
-    require 'dbconnect.php';
+    require 'dbConnect.php';
 ?>
 
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        
+
         <title>Add Item</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,22 +19,22 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
-    
+
     <body>
-            
+
          <h1>
             <div class="header">
-              
+
             </div>
          </h1>
-        
+
             <div class="tableName">
                 Add Item
             </div>
-        
-            
+
+
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -62,7 +62,7 @@
                 </li>
             </ul>
       </nav>
-            
+
             <form action="addItem.php" method="post">
                 <input type="text" placeholder="Item Id" name ="itemId">
                 <input type="text" placeholder="Item Name" name ="itemName">
@@ -80,7 +80,7 @@
                     <option value="NA">Not Applicable</option>
                 </select>
                 <input type="text" placeholder="Max Quantity" name ="maxQuantity">
-                
+
                 <input type="submit" name="qSubmit" value="Submit">
             </form>
 
@@ -96,19 +96,19 @@
         $maxQuantity=$_POST["maxQuantity"];
 
     $sql="INSERT INTO items(`itemID`, `itemName`, `pack`, `size`, `price`, `areaID`, `maxQuantity`) VALUES ('$itemID','$itemName','$pack','$size','$price','$areaID','$maxQuantity')";
-            
+
     if (mysqli_query($conn, $sql)) {
-        echo "Updated!";   
-    } 
+        echo "Updated!";
+    }
     else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     }
    ?>
-                       
 
-        
+
+
     </body>
-    
-    
+
+
 </html>
