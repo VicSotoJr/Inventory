@@ -2,10 +2,11 @@
 
 <?php
 
-$server = 'us-cdbr-iron-east-05.cleardb.net';
-$user = 'be579759e49bd1';
-$password = 'a623f1e2';
-$database = 'heroku_4dd8172fe7a14c4';
+DEFINE ('DB_HOST','us-cdbr-iron-east-05.cleardb.net');
+DEFINE ('DB_USER','be579759e49bd1');
+DEFINE ('DB_PSWD','a623f1e2');
+DEFINE ('DB_NAME','heroku_4dd8172fe7a14c4');
 
-$conn = new mysqli($server, $user, $password, $database);
+
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PSWD, DB_NAME);
 ?>
