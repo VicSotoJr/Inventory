@@ -36,7 +36,7 @@
        <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="/inventory">
+                    <a href="index.php">
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </li>

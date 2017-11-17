@@ -36,7 +36,7 @@
             <div class="topcorner"><a href="logout.php">Logout</a></div>
             <ul>
                 <li class="nav-item">
-                    <a href="/inventory">
+                    <a href="index.php">
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </li>
