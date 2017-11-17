@@ -1,12 +1,21 @@
 <?php
-$server = 'localhost';
-$user = 'root';
-$password = 'root';
-$database = 'Inventory';
-        
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$config = array(
+    'host' => $server ,
+    'user' => $username ,
+    'pw' => $password,
+    'db' => $db
+);
+
+
 try{
-    $conn = mysqli_connect($server, $user, $password, $database);
-    
+    $conn = mysqli_connect($server, $username, $password, $db);
+
 } catch (Exception $ex) {
     die("Connection Failed: " . $e->getMessage());
 }
