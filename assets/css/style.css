@@ -1,0 +1,165 @@
+body,
+html{
+    min-height: 100%;
+}
+body{
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    
+}
+
+input[type = "text"], input[type = "password"]{
+    outline:none;
+    padding:10px;
+    display:block;
+    width:300px;
+    border-radius: 3px;
+    border: 1px solid #ffa500;
+    margin: 20px auto;
+}
+select[name="areaID"]{
+    outline:none;
+    padding:20px;
+    display:block;
+    width:320px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ffa500;
+    margin: 20px auto !important;
+}
+input[name="quantity"]{
+    
+    outline:none;
+    padding:0px;
+    display:block;
+    width:60px;
+    border-radius: 3px;
+    border: 1px solid #ffa500;
+    margin:5px auto;  
+}
+
+input[type = "submit"]{
+    outline:none;
+    padding:0px;
+    display:block;
+    width:60px;
+    border-radius: 3px;
+    border: 1px solid #ffa500;
+    margin: 5px auto;
+    background:#ffa500;
+    
+    cursor: pointer;
+}
+input[type ="submit"]:hover{
+    background:#ffb500;
+}
+input[name="qSubmit"]{
+    outline:none;
+    padding:0px;
+    display:block;
+    width:60px;
+    border-radius: 3px;
+    border: 1px solid #ffa500;
+    margin: 5px auto;
+}
+input[name = "qSubmit"]:hover{
+    background:#ffb500;
+}
+button{
+    padding:10px;
+    color:black;
+    background:transparent;
+    width: auto;
+    margin: 0px auto;
+    margin-top: 0px;
+    border: 0px;
+    cursor: pointer;
+}
+a:link {
+    color: #ffa500;
+    text-decoration: none;
+}
+a:visited {
+    color: #ffa500;
+}
+a:hover {
+    color: #ffa500;
+}
+a.menu{
+    font-size:40pt;   
+}
+button:hover{
+    background: #ffb500;
+}
+
+.header{ 
+    /*border-bottom: 1px solid #eee;*/
+    padding: 25px 0px;
+    width: 100%;
+    text-align: center;
+    
+}
+.header a{
+    color:#ffa500;
+    text-decoration: none;
+}
+.topcorner{
+    position:absolute;
+    top:50px;
+    right: 10px;
+ }
+ .topcornerleft{
+    position:absolute;
+    top:50px;
+    left: 10px;
+ }
+ ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:no-content;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: ffa500;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #ffa500;
+    color: black;
+}
+
+li:last-child{
+    border-right: none;
+    float: right !important;
+    background: #228B22;
+}
+
+table, th, td{
+    color:black;
+    align-content: center;
+    text-align: center !important;
+    
+}
+
+.tableName{
+    color: Black;
+    font-size: xx-large;
+}
+
