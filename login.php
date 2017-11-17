@@ -12,7 +12,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])):
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $records = $conn->query($conn,"SELECT id,user,password FROM users WHERE user = '$username'");
+    $records = mysqli_query($conn,"SELECT id,user,password FROM users WHERE user = '$username'");
     $row = mysqli_fetch_array($records);
     $count = mysqli_num_rows($records);
 
