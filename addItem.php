@@ -58,7 +58,9 @@
                         <a class="nav-link" href="removeItem.php">Reduce Inventory</a>
                 </li>
                 <li>
-                        <a class="nav-item" href="logout.php">Logout</a>
+                     <a href="logout.php" class="btn btn-info btn-lg btn-danger">
+                         <span class="glyphicon glyphicon-log-out"></span> Log out
+                     </a>
                 </li>
             </ul>
       </nav>

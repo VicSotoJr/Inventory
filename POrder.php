@@ -34,7 +34,11 @@
             <div class="tableName">
                 Pepsi Order Form
             </div>
-            <div class="topcorner"><a href="logout.php">Logout</a></div>
+            <div class="topcorner">
+                 <a href="logout.php" class="btn btn-info btn-lg btn-danger">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+                 </a>
+            </div>
 
             <ul>
                 <li class="nav-item">
