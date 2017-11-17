@@ -36,9 +36,25 @@ session_start();
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="freezer.php">LC Inventory</a>
+                
+                <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                       LC Inventory
+                     </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="freezer.php">Freezer</a>
+                            <a class="dropdown-item" href="back.php">Back</a>
+                            <a class="dropdown-item" href="dough.php">Dough</a>
+                            <a class="dropdown-item" href="cooler.php">Cooler</a>
+                            <a class="dropdown-item" href="boxes.php">Boxes</a>
+                            <a class="dropdown-item" href="front.php">Front</a>
+                            <a class="dropdown-item" href="NA.php">NA</a>
+                          </div>
                 </li>
+
+
+
+
                 <li class="nav-item">
                         <a class="nav-link" href="pepsi.php">Pepsi Inventory</a>
                 </li>
