@@ -52,10 +52,7 @@ session_start();
                           </div>
                 </li>
 
-
-
-
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                          Drinks
                         </a>
