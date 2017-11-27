@@ -36,7 +36,7 @@ session_start();
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </li>
-                
+
                 <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                        LC Inventory
@@ -56,8 +56,17 @@ session_start();
 
 
                 <li class="nav-item">
-                        <a class="nav-link" href="pepsi.php">Pepsi Inventory</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                         Drinks
+                        </a>
+
+                        <div class="dropdown-menu">
+                         <a class="dropdown-item" href="pepsi.php">2 Liters</a>
+                         <a class="dropdown-item" href="pepsi_OZ.php">20 oz.</a>
+                        </div>
                 </li>
+
+
                 <li class="nav-item">
                         <a class="nav-link" href="addItem.php">Add Item</a>
                 </li>
