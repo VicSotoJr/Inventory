@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+require 'dbConnect.php';
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +22,7 @@ session_start();
 
 
         <?php if(isset($_SESSION['user']) ):?>
+
             <h1>
                 <div class="header">
                 </div>
@@ -80,6 +81,57 @@ session_start();
                 </li>
             </ul>
       </nav>
+
+               <!--Left Side-->
+               <div class="col-sm-6">
+                       ---TODO
+               </div>
+               <!--Right Side-->
+
+
+               <div class="col-sm-6">
+               <h3>Critical Items</h3>
+
+               <?php
+
+               if(!$conn){
+                    die('Error connecting to database');
+               }
+               echo "Should be working!";
+
+                     $query = "SELECT ID,itemID,itemName,areaID,quantity FROM items where quantity <=1 and areaID in ('FR','F','BX','C','D','B')";
+                     $result = mysqli_query($conn,$query);
+
+                     echo "<table class='table table-hover table-striped table-responsive'>";
+
+                     echo "<tr>
+                            <th>ItemID</th>
+                            <th>ItemName</th>
+                            <th>Quantity</th>
+                            <th>Barcodes</th>
+                            </tr>";
+
+                     while($row = mysqli_fetch_array($result)){
+                          $ID = $row['ID'];
+                          $item = $row['itemID'];
+                          echo "<tr><td>" . $row['itemID'] . "</td><td>" . $row['itemName'] . "</td><td>" . $row['quantity'] . "</td>"
+                                  ."<form method='post' action='barcode.php'>"
+                                  ."<td><input type='submit' name ='generate' value ='$item'></td>"
+                                  ."</form>"."</td>"
+                                  ."</tr>";
+                     }
+
+                     echo "</table>";
+
+
+               ?>
+
+               </div>
+
+
+
+
+
 
 
 
