@@ -49,7 +49,7 @@
                     <a class="nav-link" href="freezer.php">Freezer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="back.php">Back</a>
+                    <a class="nav-link" href="back.php">Rear</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="dough.php">Dough</a>
@@ -64,7 +64,7 @@
                     <a class="nav-link" href="front.php">Front</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="NA.php">Not Applicable</a>
+                    <a class="nav-link" href="NA.php">Other</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="IOrder.php">Create Order</a>

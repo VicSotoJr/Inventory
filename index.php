@@ -44,12 +44,12 @@ require 'dbConnect.php';
                      </a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="freezer.php">Freezer</a>
-                            <a class="dropdown-item" href="back.php">Back</a>
+                            <a class="dropdown-item" href="back.php">Rear</a>
                             <a class="dropdown-item" href="dough.php">Dough</a>
                             <a class="dropdown-item" href="cooler.php">Cooler</a>
                             <a class="dropdown-item" href="boxes.php">Boxes</a>
                             <a class="dropdown-item" href="front.php">Front</a>
-                            <a class="dropdown-item" href="NA.php">NA</a>
+                            <a class="dropdown-item" href="NA.php">Other</a>
                           </div>
                 </li>
 
@@ -94,10 +94,7 @@ require 'dbConnect.php';
 
                <?php
 
-               if(!$conn){
-                    die('Error connecting to database');
-               }
-               echo "Should be working!";
+
 
                      $query = "SELECT ID,itemID,itemName,areaID,quantity FROM items where quantity <=1 and areaID in ('FR','F','BX','C','D','B')";
                      $result = mysqli_query($conn,$query);
