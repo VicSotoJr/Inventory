@@ -89,7 +89,7 @@ require 'dbConnect.php';
                <!--Right Side-->
 
 
-               <div class="col-sm-6">
+               <div class="col-sm-6" >
                <h3>Critical Items</h3>
 
                <?php

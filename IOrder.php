@@ -143,10 +143,10 @@
 ?>
 
 
-     <!--
+
 
        <?php
-
+/*
        echo "<form target='Ordering' method='POST' action='https://www.lceforum.com/lceforum/login.aspx?ReturnUrl=%2flceforum%2f'>
 
             <input name='ScriptManager_TSM' type='hidden' value=';;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en:93a6b8ed-f453-4cc5-9080-8017894b33b0:ea597d4b:b25378d2'>
@@ -170,11 +170,11 @@
 
             <input name='dnn\$ctr14813\$View\$btnLogin' type='submit' id='dnn_ctr14813_View_btnLogin' value='Login' class='loginbtn'>LCEForum
 
-        </form>";
+        </form>";*/
 
 ?>
 
-            <form target="BLOrdering" method="POST" action="https://online.bldcorp.com/pnet/eOrder">
+            <form target="_blank" method="POST" action="https://online.bldcorp.com/pnet/eOrder">
 
                 <input name="SCRNFRME" type="hidden" value="_top">
 
@@ -201,17 +201,15 @@
             <input name ="Submit" type="submit" value ="login">Blue Line
         </form>
 
-            -->
+
             <br>
             <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a>
-
-               <!--
-                <object name="Ordering"type="text/html" data="https://www.lceforum.com/lceforum/login.aspx?ReturnUrl=%2flceforum%2f" width="100%" height="300px" style="overflow:auto;border:5px ridge green">
+<!--
+                <object name="Ordering" type="text/html" >
                 </object>
 
-                <object  name="BLOrdering"type="text/html" data="" width="100%" height="300px" style="overflow:auto;border:5px ridge green">
-                </object>
-                -->
+-->
+
 
 
 
