@@ -20,7 +20,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <script type="text/javascript">
+          // Popup window code
+          function newPopup() {
+          	popupWindow = window.open(
+          		'orderForm.php','popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+          }
+        </script>
     </head>
 
 
@@ -174,9 +180,9 @@
 
 ?>
 
-            <form target="_blank" method="POST" action="https://online.bldcorp.com/pnet/eOrder">
+        <form target="_blank" method="POST" action="https://online.bldcorp.com/pnet/eOrder">
 
-                <input name="SCRNFRME" type="hidden" value="_top">
+            <input name="SCRNFRME" type="hidden" value="_top">
 
             <input name="SCRNSRCE" type="hidden" value="SIGNON">
 
@@ -198,18 +204,17 @@
 
             <input name="Password"type="hidden" value="LCEBLD">
 
-            <input name ="Submit" type="submit" value ="login">Blue Line
+            <input name ="Submit" type="submit" value ="login" onclick="newPopup();">Blue Line
         </form>
 
 
             <br>
-            <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a>
+           <!-- <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a> -->
 <!--
                 <object name="Ordering" type="text/html" >
                 </object>
 
 -->
-
 
 
 

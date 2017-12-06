@@ -96,7 +96,7 @@ require 'dbConnect.php';
 
 
 
-                     $query = "SELECT ID,itemID,itemName,areaID,quantity FROM items where quantity <=1 and areaID in ('FR','F','BX','C','D','B')";
+                     $query = "SELECT ID,itemID,itemName,areaID,quantity FROM items where quantity <1 and areaID in ('FR','F','BX','C','D','B')";
                      $result = mysqli_query($conn,$query);
 
                      echo "<table class='table table-hover table-striped table-responsive'>";
