@@ -24,7 +24,7 @@
           // Popup window code
           function newPopup() {
           	popupWindow = window.open(
-          		'orderForm.php','popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+          		'orderForm.php','popUpWindow','height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
           }
         </script>
     </head>

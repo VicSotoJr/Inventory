@@ -64,15 +64,27 @@
                          <a class="dropdown-item" href="pepsi_OZ.php">20 oz.</a>
                         </div>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="addItem.php">Add Item</a>
-                </li>
-                <li class="nav-item active">
-                        <a class="nav-link" href="search.php">Search</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="removeItem.php">Reduce Inventory</a>
-                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                         Barcode Scanner
+                        </a>
+
+                        <div class="dropdown-menu">
+                         <a class="dropdown-item" href="search.php">Search</a>
+                         <a class="dropdown-item" href="removeItem.php">Remove inventory</a>
+                        </div>
+               </li>
+
+               <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Manage Inventory
+                       </a>
+
+                       <div class="dropdown-menu">
+                        <a class="dropdown-item" href="addItem.php">Add new item</a>
+                        <a class="dropdown-item" href="deleteItem.php">delete item</a>
+                       </div>
+              </li>
                 <li>
                      <a href="logout.php" class="btn btn-info btn-lg btn-danger">
                          <span class="glyphicon glyphicon-log-out"></span> Log out
@@ -81,7 +93,7 @@
             </ul>
       </nav>
 
-<div id="txtHint"><b>Result</b></div>
+<div id="txtHint"><b>Search Result</b></div>
 
 <?php
 
