@@ -1,4 +1,4 @@
-<html>
+
 <script>
 function goBack() {
     window.history.back();
@@ -16,4 +16,3 @@ function goBack() {
  echo '<p>'.bar128(stripcslashes($_POST['generate'])).'</p>';
  echo '</div></center>';
  ?>
-</html>
