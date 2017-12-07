@@ -23,8 +23,7 @@
         <script type="text/javascript">
           // Popup window code
           function newPopup() {
-          	popupWindow = window.open(
-          		'orderForm.php','popUpWindow','height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+          	popupWindow = window.open('orderForm.php','popUpWindow','height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes').focus();
           }
         </script>
     </head>
@@ -43,7 +42,7 @@
             <div class="tableName">
                 Inventory Order Form
             </div>
-           
+
 
 
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
