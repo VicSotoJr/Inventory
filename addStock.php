@@ -11,7 +11,7 @@
 <html lang = "en">
     <head>
 
-        <title>Remove Items</title>
+        <title>Add Items</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel ="stylesheet" type ="text/css" href="assets/css/style.css">
@@ -26,7 +26,7 @@
 
             <div class="header">
                 <br>
-            <form action="removeItem.php" method="POST">
+            <form action="addStock.php" method="POST">
                     <input type="text" placeholder="Enter ItemID" name="ItemID" autofocus>
                     <input type ="submit" value="Enter">
             </form>
@@ -66,13 +66,13 @@
                 </li>
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                         Scanner Functions
+                          Scanner Functions
                         </a>
 
                         <div class="dropdown-menu">
                          <a class="dropdown-item" href="search.php">Search</a>
                          <a class="dropdown-item" href="addStock.php">Add Stock</a>
-                         <a class="dropdown-item" href="removeItem.php">Remove inventory</a>
+                         <a class="dropdown-item" href="removeItem.php">Remove Stock</a>
                         </div>
                </li>
 
@@ -94,14 +94,14 @@
             </ul>
       </nav>
 
-<div id="txtHint"><b>Subtract Result</b></div>
+<div id="txtHint"><b>Addition Result</b></div>
 
 <?php
 
 $q = $_POST["ItemID"];
 
 
- $sql = "update items set quantity= quantity-1 where itemID= '$q'";
+ $sql = "update items set quantity= quantity+1 where itemID= '$q'";
                 $result = mysqli_query($conn,$sql);
  $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where itemID = '$q'";
                 $result = mysqli_query($conn,$query);
@@ -138,7 +138,7 @@ $q = $_POST["ItemID"];
                     $quantity = $_POST['quantity'];
                     $ID = $_POST['ID'];
                     $id=$_POST['id'];
-                    $sql = "update items set quantity= quantity-1 where ID= '$ID'";
+                    $sql = "update items set quantity= quantity+1 where ID= '$ID'";
 
                     if (mysqli_query($conn, $sql)) {
                          echo "Updated!";
@@ -147,7 +147,7 @@ $q = $_POST["ItemID"];
                     } else {
                          console.log( mysqli_error($conn));
                     }
-                         header("Location:removeItem.php");
+                         header("Location:addStock.php");
 
 
 

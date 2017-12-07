@@ -48,7 +48,7 @@ endif;
     </head>
 
     <body>
-            <div class="header">
+            <div class="header" >
             </div>
             <div class="topcornerleft"><a href="index.php">Home</a></div>
 
@@ -62,7 +62,7 @@ endif;
              <input type ="submit" value="Log in">
 
          </form>
-
+    
     </body>
 
 

@@ -66,11 +66,12 @@
                 </li>
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                         Barcode Scanner
+                         Scanner Functions
                         </a>
 
                         <div class="dropdown-menu">
                          <a class="dropdown-item" href="search.php">Search</a>
+                         <a class="dropdown-item" href="addStock.php">Add Stock</a>
                          <a class="dropdown-item" href="removeItem.php">Remove inventory</a>
                         </div>
                </li>

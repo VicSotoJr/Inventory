@@ -11,7 +11,7 @@
 <html lang = "en">
     <head>
 
-        <title>Remove Items</title>
+        <title>Delete Item</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel ="stylesheet" type ="text/css" href="assets/css/style.css">
@@ -21,21 +21,24 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </head>
-<body>
 
+    <body>
 
+         <h1>
             <div class="header">
-                <br>
-            <form action="removeItem.php" method="POST">
-                    <input type="text" placeholder="Enter ItemID" name="ItemID" autofocus>
-                    <input type ="submit" value="Enter">
-            </form>
+
             </div>
+         </h1>
+
+            <div class="tableName">
+                Delete Item
+            </div>
+
 
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="index.php">
+                    <a href="/index.php">
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </li>
@@ -94,68 +97,32 @@
             </ul>
       </nav>
 
-<div id="txtHint"><b>Subtract Result</b></div>
+            <form action="deleteItem.php" method="post">
+                <input type="text" placeholder="Item Id" name ="itemId">
+
+                <input type="submit" name="qSubmit" value="Submit">
+            </form>
 
 <?php
 
-$q = $_POST["ItemID"];
+    if(!empty($_POST['itemId'])){
+        $itemID = $_POST["itemId"];
 
 
- $sql = "update items set quantity= quantity-1 where itemID= '$q'";
-                $result = mysqli_query($conn,$sql);
- $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where itemID = '$q'";
-                $result = mysqli_query($conn,$query);
+    $sql="delete from items where `itemID` = '$itemID'";
 
-
-                echo "<table class='table table-hover table-striped table-responsive'>";
-
-                echo "<tr>
-                      <th>ItemID</th>
-                      <th>ItemName</th>
-                      <th>Pack</th>
-                      <th>Size</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Barcodes</th>
-                      </tr>";
-
-                while($row = mysqli_fetch_array($result)){
-                    $ID = $row['ID'];
-                    $item = $row['itemID'];
-                    echo "<tr><td>" . $row['itemID'] . "</td><td>" . $row['itemName'] . "</td><td>" . $row['pack'] . "</td>"
-                            . "<td>" . $row['size'] . "</td><td>" . $row['price'] . "</td><td>" . $row['quantity'] . "</td>"
-                            ."<form method='post' action='barcode.php'>"
-                            ."<td><input type='submit' name ='generate' value ='$item'></td>"
-                            ."</form>"."</td>"
-                            ."</tr>";
-                }
-
-                echo "</table>";
-
-                $sql = "update items set quantity= quantity-1 where ID= '$ID'";
-                if(!empty($_POST['itemID']))
-                {
-                    $quantity = $_POST['quantity'];
-                    $ID = $_POST['ID'];
-                    $id=$_POST['id'];
-                    $sql = "update items set quantity= quantity-1 where ID= '$ID'";
-
-                    if (mysqli_query($conn, $sql)) {
-                         echo "Updated!";
-                         echo $ID," ", $quantity;
-
-                    } else {
-                         console.log( mysqli_error($conn));
-                    }
-                         header("Location:removeItem.php");
+    if (mysqli_query($conn, $sql)) {
+        echo "Updated!";
+    }
+    else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    }
+   ?>
 
 
 
-                }
+    </body>
 
 
-?>
-
-
-</body>
 </html>
