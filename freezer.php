@@ -33,12 +33,7 @@
                 Freezer
             </div>
 
-            <div class="topcorner">
-                 <a href="logout.php" class="btn btn-info btn-lg btn-danger">
-                    <span class="glyphicon glyphicon-log-out"></span> Log out
-                 </a>
-
-            </div>
+           
 
                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">

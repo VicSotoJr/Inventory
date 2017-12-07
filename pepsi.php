@@ -33,11 +33,7 @@
             <div class="tableName">
                 2 Liter
             </div>
-            <div class="topcorner">
-                 <a href="logout.php" class="btn btn-info btn-lg btn-danger">
-                    <span class="glyphicon glyphicon-log-out"></span> Log out
-                 </a>
-            </div>
+            
             <ul>
                 <li class="nav-item">
                     <a href="index.php">
