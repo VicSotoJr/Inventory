@@ -83,7 +83,7 @@
 
                        <div class="dropdown-menu">
                         <a class="dropdown-item" href="addItem.php">Add new item</a>
-                        <a class="dropdown-item" href="deleteItem.php">delete item</a>
+                        <a class="dropdown-item" href="deleteItem.php">Delete item</a>
                        </div>
               </li>
                 <li>

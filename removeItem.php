@@ -72,7 +72,7 @@
                         <div class="dropdown-menu">
                          <a class="dropdown-item" href="search.php">Search</a>
                          <a class="dropdown-item" href="addStock.php">Add Stock</a>
-                         <a class="dropdown-item" href="removeItem.php">Remove inventory</a>
+                         <a class="dropdown-item" href="removeItem.php">Remove Stock</a>
                         </div>
                </li>
 
@@ -83,7 +83,7 @@
 
                        <div class="dropdown-menu">
                         <a class="dropdown-item" href="addItem.php">Add new item</a>
-                        <a class="dropdown-item" href="deleteItem.php">delete item</a>
+                        <a class="dropdown-item" href="deleteItem.php">Delete item</a>
                        </div>
               </li>
                 <li>
