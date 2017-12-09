@@ -96,6 +96,8 @@
                 while($row = mysqli_fetch_array($result)){
                     $itemId = $row['itemID'];
                     echo "<tr><td>" . $row['itemID'] . "</td><td>" . $row['itemName'] . "</td><td>" . $row['price'] . "<td>" . $row['orderAmount'] . "</td>"."</tr>";
+                    $IDarray[] = $row['itemID'];
+                    $Qarray[] = $row['orderAmount'];
                 }
 
                 echo "</table>";
@@ -105,6 +107,12 @@
 
                 echo "Estimated Order Total: <br>$";
                 echo "$row[total]";
+
+
+                echo count($IDarray);
+
+
+
 
 
 
@@ -204,12 +212,8 @@
 
 
             <br>
-           <!-- <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a> -->
-<!--
-                <object name="Ordering" type="text/html" >
-                </object>
+           <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a>
 
--->
 
 
 
