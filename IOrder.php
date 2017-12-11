@@ -207,12 +207,12 @@
 
             <input name="Password"type="hidden" value="LCEBLD">
 
-            <input name ="Submit" type="submit" value ="login" onclick="newPopup();">Blue Line
+            <input name ="Submit" type="submit" value ="Order" onclick="newPopup();">Manual Order
         </form>
 
 
             <br>
-           <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Place Order</a>
+           <a href="autoOrder.php" class="btn btn-info btn-danger" role="button">Auto Place Order</a>
 
 
 
