@@ -109,7 +109,7 @@
                 echo "$row[total]";
 
 
-                echo count($IDarray);
+                
 
 
 
