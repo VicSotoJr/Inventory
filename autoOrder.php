@@ -84,7 +84,7 @@ if ($element) {
     $element->click();
 }
 
-header("Location:IOrder.php");
+header("Location:orderComplete.php");
 
 
 
