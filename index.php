@@ -22,14 +22,14 @@ require 'dbConnect.php';
 
 
         <?php if(isset($_SESSION['user']) ):?>
-
+<!--This part will only show when the user is logged in -->
             <h1>
                 <div class="header">
                 </div>
             </h1>
 
 
-
+<!--Nav Bar -->
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -99,17 +99,16 @@ require 'dbConnect.php';
 
                <!--Left Side-->
                <div class="col-sm-3">
-
                </div>
+
                <!--Center-->
-
-
                <div class="col-sm-6" >
                <h3>Critical Items</h3>
 
                <?php
 
-
+/*This displays all of the items that have quantity less than 1 therefore that makes
+  the item a critical item */
 
                      $query = "SELECT ID,itemID,itemName,areaID,quantity FROM items where quantity <1 and areaID in ('FR','F','BX','C','D','B')";
                      $result = mysqli_query($conn,$query);
@@ -142,7 +141,6 @@ require 'dbConnect.php';
 
                <!--Right Side-->
                <div class="col-sm-3">
-
                </div>
 
 
@@ -155,7 +153,7 @@ require 'dbConnect.php';
 
 
         <?php else: ?>
-
+<!-- This is the main page as soon as you get on the site and before a user logs on-->
             <div class="header">
                 <a href="index.php"> Inventory</a>
             </div>

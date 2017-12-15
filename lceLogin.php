@@ -5,6 +5,8 @@
     <body>
 
         <?php
+        /*Using curl in order to obtain necessary cookies and other information needed
+        in order to login to the website automatically*/
         function login($url,$data){
                 $fp = fopen("cookie.txt", "w");
                 fclose($fp);
@@ -22,9 +24,9 @@
                 return curl_exec ($login);
                 ob_end_clean();
                 curl_close ($login);
-                unset($login);    
+                unset($login);
             }
-            
+
                 login("https://www.lceforum.com/lceforum/login.aspx?ReturnUrl=%2flceforum%2f","");
 
                 $myfile = fopen("cookie.txt","r");
@@ -35,14 +37,15 @@
                 $myArray = $tokenarray[6];
                 echo $myArray = substr($myArray, 84);
 ?>
-        
-        
-        
-        
-       <?php 
-   
+
+
+
+
+       <?php
+   //This is missing the username and password for secuirty purposes.
+   //This code will not work as is.
        echo "<form target='_blank' method='POST' action='https://www.lceforum.com/lceforum/login.aspx?ReturnUrl=%2flceforum%2f'>
-              
+
             <input name='ScriptManager_TSM' type='text' value=';;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en:93a6b8ed-f453-4cc5-9080-8017894b33b0:ea597d4b:b25378d2'>
             <br>
             <input name='__EVENTTARGET' type='text' value='' placeholder='EventTarget'>
@@ -53,9 +56,9 @@
             <br>
             <input name='__VIEWSTATEGENERATOR' type='text' value='6DE7526C'>
             <br>
-            <input name='dnn\$ctr14813\$View\$txtUsername' type='text' id='dnn_ctr14813_View_txtUsername' value='30640000'>
+            <input name='dnn\$ctr14813\$View\$txtUsername' type='text' id='dnn_ctr14813_View_txtUsername' value='**********'>
             <br>
-            <input name='dnn\$ctr14813\$View\$txtPassword' type='password' id='dnn_ctr14813_View_txtPassword' value='manaka'>
+            <input name='dnn\$ctr14813\$View\$txtPassword' type='password' id='dnn_ctr14813_View_txtPassword' value='*********'>
             <br>
             <input name='ScrollTop' type='text' value='' placeholder='ScrollTop'>
             <br>
@@ -66,12 +69,13 @@
             <input name='dnn\$ctr14813\$View\$btnLogin' type='submit' id='dnn_ctr14813_View_btnLogin' value='Login' class='loginbtn'>
 
         </form>";
-       
+
 ?>
 
-        
+<!--This is missing the username and password for secuirty purposes.
+This code will not work as is.-->
         <form method="POST" action="https://online.bldcorp.com/pnet/eOrder">
-   
+
             <input name="SCRNFRME" type="text" value="_top">
             <br>
             <input name="SCRNSRCE" type="text" value="SIGNON">
@@ -90,13 +94,13 @@
             <br>
             <input name="ScreenRes" type="text" value="800">
             <br>
-            <input name="UserName" type="text" value="30640000">
+            <input name="UserName" type="text" value="**********">
             <br>
-            <input name="Password"type="text" value="LCEBLD">
+            <input name="Password"type="text" value="**********">
             <br>
             <input name ="Submit" type="submit" value ="login">
         </form>
-        
-        
+
+
     </body>
 </html>

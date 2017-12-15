@@ -26,7 +26,7 @@
 
          <h1>
             <div class="header">
-
+                    <!--This is for Spacing-->
             </div>
          </h1>
 
@@ -35,6 +35,7 @@
             </div>
 
 
+<!--Nav Bar-->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -97,6 +98,8 @@
             </ul>
       </nav>
 
+<!--Add Item Form-->
+
             <form action="addItem.php" method="post">
                 <input type="text" placeholder="Item Id" name ="itemId">
                 <input type="text" placeholder="Item Name" name ="itemName">
@@ -119,6 +122,8 @@
             </form>
 
 <?php
+
+/* This will send all of the data to the database using mySQL*/
 
     if(!empty($_POST['itemId'])&&!empty($_POST['itemName'])&&!empty($_POST['pack'])&&!empty($_POST['size'])&&!empty($_POST['price'])&&!empty($_POST['areaID'])&&!empty($_POST['maxQuantity'])){
         $itemID = $_POST["itemId"];

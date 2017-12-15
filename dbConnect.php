@@ -1,7 +1,7 @@
 
 
 <?php
-
+/* Creates connection to the database */
 DEFINE ('DB_HOST','us-cdbr-iron-east-05.cleardb.net');
 DEFINE ('DB_USER','be579759e49bd1');
 DEFINE ('DB_PSWD','a623f1e2');

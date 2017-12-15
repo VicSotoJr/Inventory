@@ -5,7 +5,7 @@
         header("Location: index.php");
     }
     require 'dbConnect.php';
-
+//This file is to create the table for the popup of the orderform in IORDER.php
 ?>
 <!DOCTYPE html>
 

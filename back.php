@@ -31,7 +31,7 @@
                 Rear
             </div>
 
-           
+<!--Nav Bar -->
 
              <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
@@ -67,6 +67,9 @@
             </ul>
        </nav>
          <?php
+
+/*Displays all of the items with areaID as Back,
+  you can also update quantity and create barcodes */
 
                 $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where areaID = 'B'";
                 $result = mysqli_query($conn,$query);

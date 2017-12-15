@@ -6,7 +6,7 @@ if(isset($_SESSION['user'])){
     header("Location: index.php");
 }
 
-
+/*This finds the requirements of login in the database and grants access to login*/
 require 'dbConnect.php';
 if(!empty($_POST['username']) && !empty($_POST['password'])):
     $username = $_POST['username'];
@@ -35,7 +35,7 @@ endif;
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-
+<!-- This is the login form and page -->
         <title>Login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +62,7 @@ endif;
              <input type ="submit" value="Log in">
 
          </form>
-    
+
     </body>
 
 

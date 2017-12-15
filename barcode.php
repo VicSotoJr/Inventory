@@ -1,4 +1,6 @@
 <?php
+/* Displays barcode after a request to create one has been made */
+
  include 'barcode128.php';
  echo "<br>";
  echo "<br>";

@@ -20,12 +20,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <script type="text/javascript">
-          // Popup window code
+
+          // Popup window of the order sheet in order to use it if order is being placed online manually
           function newPopup() {
           	popupWindow = window.open('orderForm.php','popUpWindow','height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes').focus();
           }
         </script>
+
     </head>
 
 
@@ -43,7 +46,7 @@
                 Inventory Order Form
             </div>
 
-
+<!--Nav bar -->
 
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
@@ -77,7 +80,9 @@
 
             </ul>
        </nav>
+
          <?php
+         //This displays all of the orderamounts of every item that needs to be ordered.
                 $update = "UPDATE `items` SET `orderAmount`=`maxQuantity`-`quantity`";
                 $updateResult = mysqli_query($conn, $update);
                 $query = "SELECT itemID,itemName,price,orderAmount FROM items Where orderAmount > 0";
@@ -109,7 +114,7 @@
                 echo "$row[total]";
 
 
-                
+
 
 
 

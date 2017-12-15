@@ -31,7 +31,7 @@
             <div class="tableName">
                 Dough
             </div>
-            
+<!--Nav Bar-->
 
              <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
@@ -67,7 +67,7 @@
             </ul>
        </nav>
          <?php
-
+/* Displays all of the items in a table with areaID as dough */
                 $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where areaID = 'D'";
                 $result = mysqli_query($conn,$query);
 

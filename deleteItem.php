@@ -26,14 +26,14 @@
 
          <h1>
             <div class="header">
-
+                    <!--For Spacing -->
             </div>
          </h1>
 
             <div class="tableName">
                 Delete Item
             </div>
-
+<!--Nav Bar -->
 
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
@@ -97,6 +97,7 @@
             </ul>
       </nav>
 
+<!-- This is the form for deleting the item by itemID -->
             <form action="deleteItem.php" method="post">
                 <input type="text" placeholder="Item Id" name ="itemId">
 
@@ -104,7 +105,7 @@
             </form>
 
 <?php
-
+/* Searches database for the itemId inputted and removes it from the database */
     if(!empty($_POST['itemId'])){
         $itemID = $_POST["itemId"];
 

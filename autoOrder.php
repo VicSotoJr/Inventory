@@ -5,6 +5,11 @@ ob_start();
 require("IOrder.php");
 $data = ob_get_clean();
 
+/* Declaring the names of the elements of the page in a array to be able to find
+   the element much quicker using a loop than by explicitly using the name of the
+   element
+*/
+
 $quantityBox=[
      0=>"q_0",1=>"q_1",2=>"q_2",3=>"q_3",4=>"q_4",5=>"q_5",6=>"q_6",7=>"q_7",8=>"q_8",9=>"q_9",10=>"q_10",
      11=>"q_11",12=>"q_12",13=>"q_13",14=>"q_14",15=>"q_15",16=>"q_16",17=>"q_17",18=>"q_18",19=>"q_19",20=>"q_20",

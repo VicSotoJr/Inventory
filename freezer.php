@@ -33,8 +33,8 @@
                 Freezer
             </div>
 
-           
 
+<!-- Nav bar-->
                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -71,7 +71,7 @@
 
          <?php
 
-
+/* Displays all items in a table with areaID as freezer */
                 $query = "SELECT ID,itemID,itemName,pack,size,price,areaID,quantity FROM items where areaID = 'FR'";
                 $result = mysqli_query($conn,$query);
 

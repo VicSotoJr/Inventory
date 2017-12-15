@@ -23,7 +23,7 @@
     </head>
 <body>
 
-
+<!--Form in order to input itemID using the barcode scanner to increase the quantity of the item-->
             <div class="header">
                 <br>
             <form action="addStock.php" method="POST">
@@ -32,6 +32,7 @@
             </form>
             </div>
 
+<!-- Nav Bar-->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -97,6 +98,9 @@
 <div id="txtHint"><b>Addition Result</b></div>
 
 <?php
+
+/* This PHP will update the necessary quantity to the item inputted
+   then will display out in a table for the user to see*/
 
 $q = $_POST["ItemID"];
 
