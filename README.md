@@ -6,3 +6,5 @@ assets/css - this is where you will find the styling for the best, the css file 
 nbproject, phpdriver, and vendor are all necessary folders for the website to run on heroku and also to use the selenium server for automation.
 
 The rest of the files are all pages in the website and their names pretty much explain what they do. All of these files comes together to create inventory-400.herokuapp.com
+
+http://datainflow.com/generate-barcode-php/    <----This is where I got the barcode system from to use in this project.
