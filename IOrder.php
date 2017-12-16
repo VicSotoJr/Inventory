@@ -114,14 +114,6 @@
                 echo "$row[total]";
 
 
-
-
-
-
-
-
-
-
          ?>
 
            <?php
@@ -173,9 +165,9 @@
 
             <input name='__VIEWSTATEGENERATOR' type='hidden' value='6DE7526C'>
 
-            <input name='dnn\$ctr14813\$View\$txtUsername' type='hidden' id='dnn_ctr14813_View_txtUsername' value='30640000'>
+            <input name='dnn\$ctr14813\$View\$txtUsername' type='hidden' id='dnn_ctr14813_View_txtUsername' value='*******'>
 
-            <input name='dnn\$ctr14813\$View\$txtPassword' type='hidden' id='dnn_ctr14813_View_txtPassword' value='manaka'>
+            <input name='dnn\$ctr14813\$View\$txtPassword' type='hidden' id='dnn_ctr14813_View_txtPassword' value='*******'>
 
             <input name='ScrollTop' type='hidden' value='' placeholder='ScrollTop'>
 
@@ -208,9 +200,9 @@
 
             <input name="ScreenRes" type="hidden" value="800">
 
-            <input name="UserName" type="hidden" value="30640000">
+            <input name="UserName" type="hidden" value="*******">
 
-            <input name="Password"type="hidden" value="LCEBLD">
+            <input name="Password"type="hidden" value="*******">
 
             <input name ="Submit" type="submit" value ="Order" onclick="newPopup();">Manual Order
         </form>

@@ -38,12 +38,12 @@ $webdriver->get("https://www.lceforum.com/lceforum/login.aspx?ReturnUrl=%2flcefo
 $webdriver->forward();
 $element = $webdriver->findElementBy(LocatorStrategy::name, "dnn\$ctr14813\$View\$txtUsername");
 if ($element) {
-    $element->sendKeys(array("30640000" ) );
+    $element->sendKeys(array("*******" ) );
 }
 
 $element = $webdriver->findElementBy(LocatorStrategy::name, "dnn\$ctr14813\$View\$txtPassword");
 if ($element) {
-    $element->sendKeys(array("manaka" ) );
+    $element->sendKeys(array("*******" ) );
 }
 $element= $webdriver->findElementBy(LocatorStrategy::name, "dnn\$ctr14813\$View\$btnLogin");
 if ($element) {
